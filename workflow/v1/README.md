@@ -179,7 +179,7 @@ repository renames and to detect when an old name is reused for a new entity.
 The `resolvedDependencies` SHOULD contain an entry identifying the resolved
 git commit ID corresponding to `externalParameters.workflow`. The dependency's
 `uri` MUST be in [SPDX Download Location] format, i.e.
-`"git+" + workflow.uri + "@" + workflow.ref`. See [Example](v1-example.json).
+`"git+" + workflow.uri + "@" + workflow.ref`. See [Examples](#examples).
 
 The `resolvedDependencies` MAY contain additional artifacts known to be input to
 the workflow, such as the specific versions of the virtual environments used.
@@ -206,9 +206,9 @@ In practice, this is likely one of the following:
 The `invocationId` SHOULD be set to `github.server_url + "/actions/runs/" +
 github.run_id + "/attempts/" + github.run_attempt`.
 
-## Example
+## Examples
 
-See [v1-example.json](v1-example.json).
+See [example.json](example.json).
 
 Note: The `builder.id` in the example assumes that the build runs under
 [slsa-github-generator]. If GitHub itself generated the provenance, the `id`
