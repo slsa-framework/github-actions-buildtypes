@@ -4,7 +4,7 @@ This repo contains community-maintained
 [SLSA Provenance](https://slsa.dev/provenance/v1) `buildType` definitions for
 GitHub Actions.
 
-These definitions is hosted and maintained by the SLSA community, not GitHub.
+These definitions are hosted and maintained by the SLSA community, not GitHub.
 Our hope is for GitHub Actions to eventually host and maintain this definition,
 served under a URL it controls, once it officially supports SLSA. In the
 meantime, this unofficial definition can be used by tooling such as
