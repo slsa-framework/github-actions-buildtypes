@@ -1,5 +1,5 @@
 {
-    "_type": "https://in-toto.io/Statement/v1?draft",
+    "_type": "https://in-toto.io/Statement/v1",
     "predicateType": "https://slsa.dev/provenance/v1?draft",
     "predicate": {
         "buildDefinition": {
