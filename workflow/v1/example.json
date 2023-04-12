@@ -19,7 +19,7 @@
                     "path": ".github/workflow/release.yml"
                 }
             },
-            "systemParameters": {
+            "internalParameters": {
                 "github": {
                     "actor_id": "1234567",
                     "event_name": "workflow_dispatch"

@@ -150,9 +150,9 @@ contain `@` symbols.
 [variables]: https://docs.github.com/en/actions/learn-github-actions/variables
 [vars context]: https://docs.github.com/en/actions/learn-github-actions/contexts#vars-context
 
-### System parameters
+### Internal parameters
 
-All system parameters are OPTIONAL.
+All internal parameters are OPTIONAL.
 
 | Parameter | Type     | Description |
 | --------- | -------- | ----------- |
