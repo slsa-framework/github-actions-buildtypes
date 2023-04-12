@@ -13,11 +13,8 @@ meantime, this unofficial definition can be used by tooling such as
 
 ## Description
 
-> NOTE: We append `?draft` to indicate that the schema is not yet final. It will
-> be remove once this schema is final.
-
 ```jsonc
-"buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1?draft"
+"buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1"
 ```
 
 This `buildType` describes the execution of a top-level [GitHub Actions]
@@ -153,9 +150,9 @@ contain `@` symbols.
 [variables]: https://docs.github.com/en/actions/learn-github-actions/variables
 [vars context]: https://docs.github.com/en/actions/learn-github-actions/contexts#vars-context
 
-### System parameters
+### Internal parameters
 
-All system parameters are OPTIONAL.
+All internal parameters are OPTIONAL.
 
 | Parameter | Type     | Description |
 | --------- | -------- | ----------- |

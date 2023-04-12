@@ -1,9 +1,9 @@
 {
     "_type": "https://in-toto.io/Statement/v1",
-    "predicateType": "https://slsa.dev/provenance/v1?draft",
+    "predicateType": "https://slsa.dev/provenance/v1",
     "predicate": {
         "buildDefinition": {
-            "buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1?draft",
+            "buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1",
             "externalParameters": {
                 "inputs": {
                     "build_id": 123456768,
@@ -19,7 +19,7 @@
                     "path": ".github/workflow/release.yml"
                 }
             },
-            "systemParameters": {
+            "internalParameters": {
                 "github": {
                     "actor_id": "1234567",
                     "event_name": "workflow_dispatch"
