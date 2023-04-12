@@ -13,11 +13,8 @@ meantime, this unofficial definition can be used by tooling such as
 
 ## Description
 
-> NOTE: We append `?draft` to indicate that the schema is not yet final. It will
-> be remove once this schema is final.
-
 ```jsonc
-"buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1?draft"
+"buildType": "https://slsa-framework.github.io/github-actions-buildtypes/workflow/v1"
 ```
 
 This `buildType` describes the execution of a top-level [GitHub Actions]
