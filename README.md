@@ -14,11 +14,11 @@ meantime, this unofficial definition can be used by tooling such as
 
 ## What's in this repo
 
-- [docs/](docs/): GitHub Pages configuration for
-  https://slsa-framework.github.io/github-actions-buildtypes/. This is a very
-  simple set of redirects to the corresponding pages in the GitHub UI. This is
-  an easy way to maintain a stable `buildType` URI without having to worry
-  about a static site generator, themes, and so on.
+-   [docs/](docs/): GitHub Pages configuration for
+    https://slsa-framework.github.io/github-actions-buildtypes/. This is a very
+    simple set of redirects to the corresponding pages in the GitHub UI. This is
+    an easy way to maintain a stable `buildType` URI without having to worry
+    about a static site generator, themes, and so on.
 
-- [workflow/v1](workflow/v1): `buildType` for a top-level GitHub Actions
-  Workflow.
+-   [workflow/v1](workflow/v1): `buildType` for a top-level GitHub Actions
+    Workflow.
