@@ -20,5 +20,5 @@ meantime, this unofficial definition can be used by tooling such as
     an easy way to maintain a stable `buildType` URI without having to worry
     about a static site generator, themes, and so on.
 
--   [workflow/v1.md](workflow/v1.md): `buildType` for a top-level GitHub Actions
+-   [workflow/v1](workflow/v1): `buildType` for a top-level GitHub Actions
     Workflow.
