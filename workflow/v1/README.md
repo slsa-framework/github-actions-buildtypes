@@ -25,13 +25,11 @@ Only the following [event types] are supported:
 | Supported event type  | Event description |
 | --------------------- | ----------------- |
 | [`create`]            | Creation of a git tag or branch. |
-| [`deployment`]        | Creation of a deployment. |
 | [`release`]           | Creation or update of a GitHub release. |
 | [`push`]              | Creation or update of a git tag or branch. |
 | [`workflow_dispatch`] | Manual trigger of a workflow. |
 
 [`create`]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#create
-[`deployment`]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#deployment
 [`release`]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#release
 [`push`]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push
 [`workflow_dispatch`]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
@@ -65,25 +63,11 @@ top-level and reusable would make the schema too error-prone.
 
 [External parameters]: #external-parameters
 
-All external parameters are REQUIRED unless empty. At most one of `deployment`,
-`inputs`, or `release` can be set.
+All external parameters are REQUIRED unless empty. At most one of `inputs` or
+`release` can be set.
 
 <table>
 <tr><th>Parameter<th>Type<th>Description
-
-<tr id="deployment"><td><code>deployment</code><td>object<td>
-
-The non-default [deployment body parameters] for `deployment` events; unset for
-other event types. SHOULD omit parameters that have a default value to make
-verification easier. SHOULD be unset if there are no non-default values.
-
-Only includes the parameters that are passed to the workflow. As of API version
-2022-11-28, this is: `description`, `environment`, `payload`,
-`production_environment`, `transient_environment`.
-
-Can be computed from the [github context] using the corresponding fields from
-`github.event.deployment`, filtering out default values (see API docs) and using
-`original_environment` for `environment`.
 
 <tr id="inputs"><td><code>inputs</code><td>object<td>
 
@@ -120,10 +104,11 @@ be built.
 <tr id="workflow.ref"><td><code>workflow.ref</code><td>string<td>
 
 A git reference to the commit containing the workflow, as either a git ref
-(starting with `refs/`) or commit ID (lowercase hex). This is the value passed
-in via the event. Only `deployment` events support commit IDs.
+(starting with `refs/`). This is the value passed in via the event.
 
-Can be computed from the [github context] using `github.ref || github.sha`.
+Can be computed from the [github context] using `github.ref`. Note that
+`github.ref` is not guaranteed to be available for all event types but should be
+present for all currently supported event types.
 
 <tr id="workflow.repository"><td><code>workflow.repository</code><td>string<td>
 
@@ -144,7 +129,6 @@ contain `@` symbols.
 
 </table>
 
-[deployment body parameters]: https://docs.github.com/en/rest/deployments/deployments?apiVersion=2022-11-28#create-a-deployment--parameters
 [github context]: https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
 [release body parameters]: https://docs.github.com/en/rest/releases/releases?apiVersion=2022-11-28#create-a-release--parameters
 [variables]: https://docs.github.com/en/actions/learn-github-actions/variables
@@ -212,6 +196,10 @@ Note: The `builder.id` in the example assumes that the build runs under
 would be different.
 
 ## Version history
+
+### v1.1
+
+- The `deployment` event type was removed as a supported event type.
 
 ### v1
 
