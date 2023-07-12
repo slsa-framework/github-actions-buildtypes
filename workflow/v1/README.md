@@ -106,7 +106,7 @@ be built.
 A git reference to the commit containing the workflow, as either a git ref
 (starting with `refs/`). This is the value passed in via the event.
 
-Can be computed from the [github context] using `github.ref`. Not that
+Can be computed from the [github context] using `github.ref`. Note that
 `github.ref` is not guaranteed to be available for all event types but should be
 present for all currently supported event types.
 
