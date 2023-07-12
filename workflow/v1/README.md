@@ -197,6 +197,10 @@ would be different.
 
 ## Version history
 
+### v1.1
+
+- The `deployment` event type was removed as a supported event type.
+
 ### v1
 
 Initial version
